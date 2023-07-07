@@ -1,0 +1,51 @@
+\documentclass[12pt, a4paper, simple]{eskdtext}
+
+\usepackage{hyperref}
+\usepackage{env}
+\usepackage{styles/coursework_lst}
+\usepackage{styles/coursework_content_menu}
+\usepackage{styles/coursework_tables}
+\usepackage{styles/coursework_pictures}
+
+% Код
+\ESKDletter{}{К}{Р}
+\def \courseworkDocTypeNum {12}
+\def \courseworkDocVer {00}
+\def \courseworkCode {\ESKDtheLetterI\ESKDtheLetterII\ESKDtheLetterIII.\courseworkStudentGroupName\courseworkStudentGroupNum.\courseworkStudentCard-0\courseworkDocNum~\courseworkDocTypeNum~\courseworkDocVer}
+
+\def \courseworkDocTopic {ТЕКСТ ПРОГРАММЫ}
+
+% колонтитулы
+\usepackage{fancybox, fancyhdr}
+\fancypagestyle{plain}
+{
+    \renewcommand{\footrulewidth}{10pt}          % Толщина отделяющей полоски снизу
+    \renewcommand{\headrulewidth}{10pt}          % Толщина отделяющей полоски сверху
+    \fancyhead[C]{\hfill\courseworkCode\hfill\thepage} % Сверху по центру выводить код
+    \fancyfoot{}                                % Очистить нижний колонтитул
+}
+
+% Графа 1 (наименование изделия/документа)
+\ESKDcolumnI {\ESKDfontIII \courseworkTopic \\ \courseworkDocTopic}
+
+% Графа 2 (обозначение документа)
+\ESKDsignature {\courseworkCode}
+
+% Графа 9 (наименование или различительный индекс предприятия) задает команда
+\ESKDcolumnIX {\courseworkDepartment}
+
+% Графа 11 (фамилии лиц, подписывающих документ) задают команды
+\ESKDcolumnXIfI {\fontsize{10}{10}\selectfont\courseworkStudentSurname~\courseworkStudentName}
+\ESKDcolumnXIfII {\fontsize{8}{10}\selectfont\courseworkTeacherSurname~\courseworkTeacherName}
+\ESKDcolumnXIfV {\fontsize{8}{10}\selectfont\courseworkTeacherSurname~\courseworkTeacherName}
+
+\begin{document}
+    \input{tex/coursework_a_titlePage.tex}
+
+    \ESKDstyle{title}
+    \thispagestyle{plain}
+    \pagestyle{plain}
+    \hspace{0pt}
+
+    \paragraph{} \textbf{Исходный код приложения}
+\end{document}

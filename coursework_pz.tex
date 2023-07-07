@@ -1,0 +1,165 @@
+\documentclass[12pt, a4paper, simple]{eskdtext}
+
+\usepackage{hyperref}
+\usepackage{env}
+\usepackage{styles/coursework_lst}
+\usepackage{styles/coursework_content_menu}
+\usepackage{styles/coursework_tables}
+\usepackage{styles/coursework_pictures}
+\usepackage{styles/coursework_ref}
+
+% Код
+\ESKDletter{}{К}{Р}
+\def \courseworkDocTypeNum {81}
+\def \courseworkDocVer {00}
+\def \courseworkCode {\ESKDtheLetterI\ESKDtheLetterII\ESKDtheLetterIII.\courseworkStudentGroupName\courseworkStudentGroupNum.\courseworkStudentCard-0\courseworkDocNum~\courseworkDocTypeNum~\courseworkDocVer}
+
+\def \courseworkDocTopic {ПОЯСНИТЕЛЬНАЯ ЗАПИСКА}
+
+% Графа 1 (наименование изделия/документа)
+\ESKDcolumnI {\ESKDfontIII \courseworkTopic \\ \courseworkDocTopic}
+
+% Графа 2 (обозначение документа)
+\ESKDsignature {\courseworkCode}
+
+% Графа 9 (наименование или различительный индекс предприятия) задает команда
+\ESKDcolumnIX {\courseworkDepartment}
+
+% Графа 11 (фамилии лиц, подписывающих документ) задают команды
+\ESKDcolumnXIfI {\fontsize{10}{10}\selectfont\courseworkStudentSurname~\courseworkStudentName}
+\ESKDcolumnXIfII {\fontsize{8}{10}\selectfont\courseworkTeacherSurname~\courseworkTeacherName}
+\ESKDcolumnXIfV {\fontsize{8}{10}\selectfont\courseworkTeacherSurname~\courseworkTeacherName}
+
+\begin{document}
+    \input{tex/coursework_pz_titlePage.tex}
+
+    \ESKDthisStyle{empty}
+    лист с заданием
+    \newpage
+    \ESKDthisStyle{formII}
+    
+    \tableofcontents
+    \paragraph{ПРИЛОЖЕНИЕ А. КОД ПРОГРАММЫ}
+    \paragraph{ПРИЛОЖЕНИЕ Б. СХЕМА ПРОГРАММЫ}
+    \newpage
+
+    \section*{ВВЕДЕНИЕ}
+    \phantomsection
+    \addcontentsline{toc}{section}{ВВЕДЕНИЕ}
+
+    \newpage
+
+    \section{АНАЛИЗ ПОСТАВКИ ЗАДАЧИ}
+    \subsection{Результаты обследования системы}
+
+    \newpage
+    
+    \subsection{Обоснование необходимости создания системы}
+
+    \newpage
+
+    \subsection{Формирование рекомендаций по созданию системы}
+
+    \newpage
+
+    \subsection{Разработка, оценка и выбор варианта концепции системы}
+
+    \newpage
+
+    \subsection{Постановка задачи на создание системы}
+
+    \newpage
+    
+    \section{ПРОЕКТИРОВАНИЕ СТРУКТУРЫ ПРИЛОЖЕНИЯ}
+    
+    \subsection{Разработка структуры системы}
+
+    \newpage
+
+    \subsection{Проектирование программного обеспечения системы}
+
+    \newpage
+
+    \subsection{Проектирование интерфейса пользователя с системой}
+    
+    \newpage
+
+    \section{РАЗРАБОТКА АЛГОРИТМОВ ФУНКЦИОНИРОВАНИЯ И СТРУКТУР ДАННЫХ}
+
+    \newpage
+    
+    \section{РЕАЛИЗАЦИЯ ПРИЛОЖЕНИЯ И РЕЗУЛЬТАТЫ ИСПЫТАНИЙ}
+    \subsection{Кодирование программного обеспечения}
+
+    \newpage
+    
+    \subsection{Интеграция программного обеспечения}
+
+    \newpage
+
+    \subsection{Тестирование приложения}
+
+    \newpage
+
+    \section*{ЗАКЛЮЧЕНИЕ}
+    \phantomsection
+    \addcontentsline{toc}{section}{ЗАКЛЮЧЕНИЕ}
+
+    \newpage
+
+    \begingroup
+      \section*{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+      \phantomsection
+      \addcontentsline{toc}{section}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+    
+      \renewcommand{\addcontentsline}[3]{}
+      \renewcommand{\section}[2]{}
+    
+      \begin{thebibliography}{}
+        \bibitem{GOST_1}
+        ГОСТ 2.105-95.
+        Единая система конструкторской документации (ЕСКД). 
+        Общие требования к текстовым документам. 
+
+        \bibitem{GOST_2}
+        ГОСТ 19.504-79. 
+        Единая система программной документации ЕСПД. Руководство программиста. 
+        Требования к содержанию и оформлению.
+
+        \bibitem{GOST_3}
+        ГОСТ 19.701-90. ЕСПД. 
+        Схемы алгоритмов, программ, данных и систем. 
+        Обозначения условные и правила выполнения.
+
+        \bibitem{GOST_4}
+        ГОСТ 19.005-85. ЕСПД. 
+        Р-схемы алгоритмов и программ. Обозначения условные графические и правила выполнения.
+
+        \bibitem{GOST_5}
+        ГОСТ 19.101-77. ЕСПД. 
+        Виды программ и программных документов.
+
+        \bibitem{GOST_6}
+        ГОСТ 19.102-77. ЕСПД. 
+        Стадии разработки.
+
+        \bibitem{GOST_7}
+        ГОСТ 19.103-77. ЕСПД.  
+        Обозначения программ и программных документов. 
+
+        \bibitem{GOST_8}
+        ГОСТ 19.401-78. ЕСПД. 
+        Текст программы. Требования к содержанию и оформлению.
+
+        \bibitem{GOST_9}
+        ГОСТ 19.402-78. ЕСПД. 
+        Описание программы.
+
+        \bibitem{GOST_10}
+        ГОСТ 7.1-2003. Система стандартов по информации, библиотечному и издательскому делу. 
+        Библиографическая запись. Библиографическое описание. 
+        Общие требования и правила составления. 
+      \end{thebibliography}
+    \endgroup
+    \newpage
+\end{document}

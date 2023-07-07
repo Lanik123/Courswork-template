@@ -1,0 +1,25 @@
+% Стили для страницы содержания
+
+% = = = = = = = = = = = = = = = =
+
+\usepackage{tocloft}
+
+\tocloftpagestyle{empty}
+
+\renewcommand{\l@section}[2]{\@dottedtocline{1}{0em}{3em}{#1}{#2}}
+\renewcommand{\l@subsection}[2]{\@dottedtocline{1}{0em}{3em}{#1}{#2}}
+\renewcommand{\l@subsubsection}[2]{\@dottedtocline{1}{0em}{3em}{#1}{#2}}
+
+% = = = = = = = = = = = = = = = =
+
+% колонтитул без нумерации
+\usepackage{fancybox, fancyhdr}
+\fancypagestyle{toc} %новый стиль
+{
+    \renewcommand{\footrulewidth}{0pt}      % Толщина отделяющей полоски снизу
+    \renewcommand{\headrulewidth}{0pt}      % Толщина отделяющей полоски сверху
+    \fancyhead{}                            % Очистить верхний колонтитул
+    \fancyfoot{}                            % Очистить нижний колонтитул
+}
+
+% = = = = = = = = = = = = = = = =

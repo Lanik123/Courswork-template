@@ -1,0 +1,30 @@
+\documentclass[12pt, a4paper, simple]{eskdtext}
+\def\No{\textnumero}
+
+\usepackage{env}
+
+% Код
+\ESKDletter{}{К}{Р}
+\def \courseworkDocTypeNum {90}
+\def \courseworkDocVer {00}
+\def \courseworkCode {\ESKDtheLetterI\ESKDtheLetterII\ESKDtheLetterIII.\courseworkStudentGroupName\courseworkStudentGroupNum.\courseworkStudentCard-0\courseworkDocNum~\courseworkDocTypeNum~\courseworkDocVer}
+
+\def \courseworkDocTopic {СХЕМА ПРОГРАММЫ}
+
+% Графа 1 (наименование изделия/документа)
+\ESKDcolumnI {\ESKDfontIII \courseworkTopic \\ \courseworkDocTopic}
+
+% Графа 2 (обозначение документа)
+\ESKDsignature {\courseworkCode}
+
+% Графа 9 (наименование или различительный индекс предприятия) задает команда
+\ESKDcolumnIX {\courseworkDepartment}
+
+% Графа 11 (фамилии лиц, подписывающих документ) задают команды
+\ESKDcolumnXIfI {\fontsize{10}{10}\selectfont\courseworkStudentSurname~\courseworkStudentName}
+\ESKDcolumnXIfII {\fontsize{8}{10}\selectfont\courseworkTeacherSurname~\courseworkTeacherName}
+\ESKDcolumnXIfV {\fontsize{8}{10}\selectfont\courseworkTeacherSurname~\courseworkTeacherName}
+
+\begin{document}
+    \input{tex/coursework_b_titlePage.tex}
+\end{document}
